@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "EOCEmployee.h"
 
 @interface ViewController ()
 
@@ -16,13 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
+//类族模式 通过父类type创建不同子类使接口简单，但实际仍是返回的子类，并且执行的也是子类的方法
+- (void)clusterDemo {
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    EOCEmployee *developer = [EOCEmployee employeeWithType:EOCEmployeeTypeDeveloper];
+    NSLog(@"%@",developer);
+    [developer doADaysWork];
 }
 
 

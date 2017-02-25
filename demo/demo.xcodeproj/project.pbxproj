@@ -22,6 +22,10 @@
 		C958C12D1E61B0C400E8D721 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C12B1E61B0C400E8D721 /* Person.m */; };
 		C958C1301E61B10600E8D721 /* SQLiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C12F1E61B10600E8D721 /* SQLiteViewController.m */; };
 		C958C1331E61B14F00E8D721 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C958C1321E61B14F00E8D721 /* libsqlite3.tbd */; };
+		C958C1371E61B5E400E8D721 /* EOCEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1361E61B5E400E8D721 /* EOCEmployee.m */; };
+		C958C13D1E61BA9000E8D721 /* EOCEmployeeDesigner.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C13C1E61BA9000E8D721 /* EOCEmployeeDesigner.m */; };
+		C958C1401E61BAAA00E8D721 /* EOCEmployeeFinance.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C13F1E61BAAA00E8D721 /* EOCEmployeeFinance.m */; };
+		C958C1431E61BBC600E8D721 /* EOCEmployeeDeveloper.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1421E61BBC600E8D721 /* EOCEmployeeDeveloper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,14 @@
 		C958C12E1E61B10600E8D721 /* SQLiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteViewController.h; sourceTree = "<group>"; };
 		C958C12F1E61B10600E8D721 /* SQLiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteViewController.m; sourceTree = "<group>"; };
 		C958C1321E61B14F00E8D721 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C958C1351E61B5E400E8D721 /* EOCEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCEmployee.h; sourceTree = "<group>"; };
+		C958C1361E61B5E400E8D721 /* EOCEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCEmployee.m; sourceTree = "<group>"; };
+		C958C13B1E61BA9000E8D721 /* EOCEmployeeDesigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCEmployeeDesigner.h; sourceTree = "<group>"; };
+		C958C13C1E61BA9000E8D721 /* EOCEmployeeDesigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCEmployeeDesigner.m; sourceTree = "<group>"; };
+		C958C13E1E61BAAA00E8D721 /* EOCEmployeeFinance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCEmployeeFinance.h; sourceTree = "<group>"; };
+		C958C13F1E61BAAA00E8D721 /* EOCEmployeeFinance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCEmployeeFinance.m; sourceTree = "<group>"; };
+		C958C1411E61BBC600E8D721 /* EOCEmployeeDeveloper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCEmployeeDeveloper.h; sourceTree = "<group>"; };
+		C958C1421E61BBC600E8D721 /* EOCEmployeeDeveloper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCEmployeeDeveloper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,7 @@
 		C958C1001E61A4B300E8D721 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				C958C1341E61B1F900E8D721 /* ClassCluster(类族) */,
 				C958C1271E61B08100E8D721 /* sqlite */,
 				C958C1211E61AD6900E8D721 /* socket */,
 				C958C1181E61A4D400E8D721 /* block */,
@@ -149,6 +162,21 @@
 				C958C1321E61B14F00E8D721 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C958C1341E61B1F900E8D721 /* ClassCluster(类族) */ = {
+			isa = PBXGroup;
+			children = (
+				C958C1351E61B5E400E8D721 /* EOCEmployee.h */,
+				C958C1361E61B5E400E8D721 /* EOCEmployee.m */,
+				C958C13B1E61BA9000E8D721 /* EOCEmployeeDesigner.h */,
+				C958C13C1E61BA9000E8D721 /* EOCEmployeeDesigner.m */,
+				C958C13E1E61BAAA00E8D721 /* EOCEmployeeFinance.h */,
+				C958C13F1E61BAAA00E8D721 /* EOCEmployeeFinance.m */,
+				C958C1411E61BBC600E8D721 /* EOCEmployeeDeveloper.h */,
+				C958C1421E61BBC600E8D721 /* EOCEmployeeDeveloper.m */,
+			);
+			name = "ClassCluster(类族)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +256,13 @@
 				C958C1061E61A4B300E8D721 /* AppDelegate.m in Sources */,
 				C958C12D1E61B0C400E8D721 /* Person.m in Sources */,
 				C958C11F1E61A53C00E8D721 /* TestView.m in Sources */,
+				C958C1431E61BBC600E8D721 /* EOCEmployeeDeveloper.m in Sources */,
+				C958C1401E61BAAA00E8D721 /* EOCEmployeeFinance.m in Sources */,
+				C958C13D1E61BA9000E8D721 /* EOCEmployeeDesigner.m in Sources */,
 				C958C1261E61AEE600E8D721 /* SocketViewController.m in Sources */,
 				C958C11B1E61A50E00E8D721 /* BlockViewController.m in Sources */,
 				C958C12C1E61B0C400E8D721 /* SQLiteManager.m in Sources */,
+				C958C1371E61B5E400E8D721 /* EOCEmployee.m in Sources */,
 				C958C1031E61A4B300E8D721 /* main.m in Sources */,
 				C958C1301E61B10600E8D721 /* SQLiteViewController.m in Sources */,
 			);
