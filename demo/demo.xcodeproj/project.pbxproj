@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BAE18221E65477900A3B151 /* EOCAutoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE18211E65477900A3B151 /* EOCAutoDictionary.m */; };
 		C958C1031E61A4B300E8D721 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1021E61A4B300E8D721 /* main.m */; };
 		C958C1061E61A4B300E8D721 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1051E61A4B300E8D721 /* AppDelegate.m */; };
 		C958C1091E61A4B300E8D721 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1081E61A4B300E8D721 /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9BAE18201E65477900A3B151 /* EOCAutoDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCAutoDictionary.h; sourceTree = "<group>"; };
+		9BAE18211E65477900A3B151 /* EOCAutoDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCAutoDictionary.m; sourceTree = "<group>"; };
 		C958C0FE1E61A4B300E8D721 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C958C1021E61A4B300E8D721 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C958C1041E61A4B300E8D721 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9BAE181F1E65473D00A3B151 /* autoSelector */ = {
+			isa = PBXGroup;
+			children = (
+				9BAE18201E65477900A3B151 /* EOCAutoDictionary.h */,
+				9BAE18211E65477900A3B151 /* EOCAutoDictionary.m */,
+			);
+			name = autoSelector;
+			sourceTree = "<group>";
+		};
 		C958C0F51E61A4B300E8D721 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +108,7 @@
 		C958C1001E61A4B300E8D721 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				9BAE181F1E65473D00A3B151 /* autoSelector */,
 				C958C1341E61B1F900E8D721 /* ClassCluster(类族) */,
 				C958C1271E61B08100E8D721 /* sqlite */,
 				C958C1211E61AD6900E8D721 /* socket */,
@@ -258,6 +271,7 @@
 				C958C11F1E61A53C00E8D721 /* TestView.m in Sources */,
 				C958C1431E61BBC600E8D721 /* EOCEmployeeDeveloper.m in Sources */,
 				C958C1401E61BAAA00E8D721 /* EOCEmployeeFinance.m in Sources */,
+				9BAE18221E65477900A3B151 /* EOCAutoDictionary.m in Sources */,
 				C958C13D1E61BA9000E8D721 /* EOCEmployeeDesigner.m in Sources */,
 				C958C1261E61AEE600E8D721 /* SocketViewController.m in Sources */,
 				C958C11B1E61A50E00E8D721 /* BlockViewController.m in Sources */,
@@ -419,6 +433,7 @@
 				C958C1171E61A4B300E8D721 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
