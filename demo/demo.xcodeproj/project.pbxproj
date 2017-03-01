@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B4FA6F01E66AA6A001A0003 /* NSString+EOCMyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FA6EF1E66AA6A001A0003 /* NSString+EOCMyAdditions.m */; };
 		9BAE18221E65477900A3B151 /* EOCAutoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE18211E65477900A3B151 /* EOCAutoDictionary.m */; };
 		C958C1031E61A4B300E8D721 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1021E61A4B300E8D721 /* main.m */; };
 		C958C1061E61A4B300E8D721 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1051E61A4B300E8D721 /* AppDelegate.m */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B4FA6EE1E66AA6A001A0003 /* NSString+EOCMyAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EOCMyAdditions.h"; sourceTree = "<group>"; };
+		9B4FA6EF1E66AA6A001A0003 /* NSString+EOCMyAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EOCMyAdditions.m"; sourceTree = "<group>"; };
 		9BAE18201E65477900A3B151 /* EOCAutoDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCAutoDictionary.h; sourceTree = "<group>"; };
 		9BAE18211E65477900A3B151 /* EOCAutoDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCAutoDictionary.m; sourceTree = "<group>"; };
 		C958C0FE1E61A4B300E8D721 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B4FA6ED1E66A8AE001A0003 /* mehtodSwizzling(方法调配) */ = {
+			isa = PBXGroup;
+			children = (
+				9B4FA6EE1E66AA6A001A0003 /* NSString+EOCMyAdditions.h */,
+				9B4FA6EF1E66AA6A001A0003 /* NSString+EOCMyAdditions.m */,
+			);
+			name = "mehtodSwizzling(方法调配)";
+			sourceTree = "<group>";
+		};
 		9BAE181F1E65473D00A3B151 /* autoSelector */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +120,7 @@
 		C958C1001E61A4B300E8D721 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				9B4FA6ED1E66A8AE001A0003 /* mehtodSwizzling(方法调配) */,
 				9BAE181F1E65473D00A3B151 /* autoSelector */,
 				C958C1341E61B1F900E8D721 /* ClassCluster(类族) */,
 				C958C1271E61B08100E8D721 /* sqlite */,
@@ -277,6 +290,7 @@
 				C958C11B1E61A50E00E8D721 /* BlockViewController.m in Sources */,
 				C958C12C1E61B0C400E8D721 /* SQLiteManager.m in Sources */,
 				C958C1371E61B5E400E8D721 /* EOCEmployee.m in Sources */,
+				9B4FA6F01E66AA6A001A0003 /* NSString+EOCMyAdditions.m in Sources */,
 				C958C1031E61A4B300E8D721 /* main.m in Sources */,
 				C958C1301E61B10600E8D721 /* SQLiteViewController.m in Sources */,
 			);
