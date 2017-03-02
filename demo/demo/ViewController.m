@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger, demoList) {
     DEMO_CLUSTER,//类族
     DEMO_AUTOSELECTOR,//动态方法解析
     DEMO_METHODSWIZZLING,//运行时方法交换
+    DEMO_DESIGNATEDINITIALIZER,//全能初始化方法
 };
 
 @interface ViewController ()

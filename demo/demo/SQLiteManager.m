@@ -9,8 +9,6 @@
 #import "SQLiteManager.h"
 #import <sqlite3.h>
 
-
-
 @implementation SQLiteManager
 
 //    全局的数据库‘句柄’ ，指向结构体的指针
@@ -19,13 +17,15 @@ sqlite3 *db;
 
 //执行sql返回结果
 -(NSMutableArray *)exeRecordSet:(NSString *)sql{
+/*
     /// 准备sql 预编译sql
     /// @param db#>    : <#db#> 数据库句柄
     /// @param zSql#>  : <#zSql#> 执行的sql语句
     /// @param nByte#> : <#nByte#> sql语句字节的长度 但是传入－1能够自动计算其长度
     /// @param ppStmt#>: <#ppStmt#> stmt 语句的指针，后续的查找操作，全部依赖这个指针 相当于预编译好的sql，需要“释放”
     /// @param pzTail#>: <#pzTail#> 尾部参数，通常nil
-//定义语句的指针
+*/
+ //定义语句的指针
     sqlite3_stmt *stmt;
     if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, nil) != SQLITE_OK) {
         NSLog(@"sql语句错误");
