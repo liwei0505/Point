@@ -10,6 +10,8 @@
 		9B4A467F1E67E8C9005EB4DD /* EOCRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A467E1E67E8C9005EB4DD /* EOCRectangle.m */; };
 		9B4A46821E67ECC8005EB4DD /* EOCSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A46811E67ECC8005EB4DD /* EOCSquare.m */; };
 		9B4A46861E67FCFE005EB4DD /* EOCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A46851E67FCFE005EB4DD /* EOCPerson.m */; };
+		9B4A468A1E6944F2005EB4DD /* EOCNetworkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A46891E6944F2005EB4DD /* EOCNetworkFetcher.m */; };
+		9B4A468D1E69467A005EB4DD /* EOCDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A468C1E69467A005EB4DD /* EOCDataModel.m */; };
 		9B4FA6F01E66AA6A001A0003 /* NSString+EOCMyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FA6EF1E66AA6A001A0003 /* NSString+EOCMyAdditions.m */; };
 		9BAE18221E65477900A3B151 /* EOCAutoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE18211E65477900A3B151 /* EOCAutoDictionary.m */; };
 		C958C1031E61A4B300E8D721 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1021E61A4B300E8D721 /* main.m */; };
@@ -40,6 +42,10 @@
 		9B4A46811E67ECC8005EB4DD /* EOCSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCSquare.m; sourceTree = "<group>"; };
 		9B4A46841E67FCFE005EB4DD /* EOCPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCPerson.h; sourceTree = "<group>"; };
 		9B4A46851E67FCFE005EB4DD /* EOCPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCPerson.m; sourceTree = "<group>"; };
+		9B4A46881E6944F2005EB4DD /* EOCNetworkFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCNetworkFetcher.h; sourceTree = "<group>"; };
+		9B4A46891E6944F2005EB4DD /* EOCNetworkFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCNetworkFetcher.m; sourceTree = "<group>"; };
+		9B4A468B1E69467A005EB4DD /* EOCDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCDataModel.h; sourceTree = "<group>"; };
+		9B4A468C1E69467A005EB4DD /* EOCDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCDataModel.m; sourceTree = "<group>"; };
 		9B4FA6EE1E66AA6A001A0003 /* NSString+EOCMyAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EOCMyAdditions.h"; sourceTree = "<group>"; };
 		9B4FA6EF1E66AA6A001A0003 /* NSString+EOCMyAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EOCMyAdditions.m"; sourceTree = "<group>"; };
 		9BAE18201E65477900A3B151 /* EOCAutoDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCAutoDictionary.h; sourceTree = "<group>"; };
@@ -111,6 +117,17 @@
 			name = discription;
 			sourceTree = "<group>";
 		};
+		9B4A46871E69449C005EB4DD /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				9B4A46881E6944F2005EB4DD /* EOCNetworkFetcher.h */,
+				9B4A46891E6944F2005EB4DD /* EOCNetworkFetcher.m */,
+				9B4A468B1E69467A005EB4DD /* EOCDataModel.h */,
+				9B4A468C1E69467A005EB4DD /* EOCDataModel.m */,
+			);
+			name = delegate;
+			sourceTree = "<group>";
+		};
 		9B4FA6ED1E66A8AE001A0003 /* mehtodSwizzling(方法调配) */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +166,7 @@
 		C958C1001E61A4B300E8D721 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				9B4A46871E69449C005EB4DD /* delegate */,
 				9B4A46831E67FCE6005EB4DD /* discription */,
 				9B4A467C1E67E844005EB4DD /* designatedInitializer */,
 				9B4FA6ED1E66A8AE001A0003 /* mehtodSwizzling(方法调配) */,
@@ -316,6 +334,7 @@
 				C958C1431E61BBC600E8D721 /* EOCEmployeeDeveloper.m in Sources */,
 				9B4A467F1E67E8C9005EB4DD /* EOCRectangle.m in Sources */,
 				C958C1401E61BAAA00E8D721 /* EOCEmployeeFinance.m in Sources */,
+				9B4A468A1E6944F2005EB4DD /* EOCNetworkFetcher.m in Sources */,
 				9BAE18221E65477900A3B151 /* EOCAutoDictionary.m in Sources */,
 				C958C13D1E61BA9000E8D721 /* EOCEmployeeDesigner.m in Sources */,
 				C958C1261E61AEE600E8D721 /* SocketViewController.m in Sources */,
@@ -327,6 +346,7 @@
 				9B4FA6F01E66AA6A001A0003 /* NSString+EOCMyAdditions.m in Sources */,
 				C958C1031E61A4B300E8D721 /* main.m in Sources */,
 				C958C1301E61B10600E8D721 /* SQLiteViewController.m in Sources */,
+				9B4A468D1E69467A005EB4DD /* EOCDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

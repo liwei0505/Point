@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EOCPerson : NSObject
+@interface EOCPerson : NSObject <NSCopying>
 
 @property (copy, nonatomic, readonly) NSString *firstName;
 @property (copy, nonatomic, readonly) NSString *lastName;
 
 - (instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName;
-
+- (void)addFriend:(EOCPerson *)person;
+- (void)removeFriend:(EOCPerson *)person;
 @end
