@@ -4,7 +4,10 @@
 //
 //  Created by lee on 17/3/2.
 //  Copyright © 2017年 lee. All rights reserved.
-//
+/*
+ 1.自定义类实现copy功能
+ 2.重写description
+ */
 
 #import <Foundation/Foundation.h>
 
