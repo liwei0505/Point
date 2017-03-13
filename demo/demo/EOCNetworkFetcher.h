@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#pragma mark - delegate
 @class EOCNetworkFetcher;
 @protocol EOCNetworkFetcherDelegate <NSObject>
 
@@ -17,6 +18,16 @@
 
 @end
 
+#pragma mark - block
+typedef void(^EOCNetworkFetcherCompletionHandler) (NSData *data);
+typedef void(^EOCNetworkFetcherErrorHandler) (NSError *error);
+
 @interface EOCNetworkFetcher : NSObject
+
+#pragma mark - delegate
 @property (weak, nonatomic) id <EOCNetworkFetcherDelegate> delegate;
+
+#pragma mark - block
+- (id)initWithURL:(NSURL *)url;
+- (void)startWithCompletionHandler:(EOCNetworkFetcherCompletionHandler)handler failureHandler:(EOCNetworkFetcherErrorHandler)failure;
 @end

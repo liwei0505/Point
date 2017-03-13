@@ -22,6 +22,7 @@
 
 @implementation EOCNetworkFetcher
 
+#pragma mark - delegate
 - (void)callDelegateMethod {
 
     NSData *data = nil;
@@ -42,6 +43,14 @@
     _delegate = delegate;
     _delegateFlags.didReceiveData = [delegate respondsToSelector:@selector(networkFetcher:didReceiveData:)];
     _delegateFlags.didFailWithError = [delegate respondsToSelector:@selector(networkFetcher:didFailWithError:)];
+}
+
+#pragma mark - block
+- (id)initWithURL:(NSURL *)url {
+    return self;
+}
+
+- (void)startWithCompletionHandler:(EOCNetworkFetcherCompletionHandler)handler failureHandler:(EOCNetworkFetcherErrorHandler)failure {
 }
 
 @end

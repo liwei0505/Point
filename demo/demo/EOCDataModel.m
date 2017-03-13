@@ -7,15 +7,37 @@
 //
 
 #import "EOCDataModel.h"
-#import "EOCNetworkFetcher.h"
 
 @interface EOCDataModel() <EOCNetworkFetcherDelegate>
+
+@property (strong, nonatomic) NSData *data;
 
 @end
 
 @implementation EOCDataModel
 
-- (void)networkFetcher:(EOCNetworkFetcher *)fetcher didReceiveData:(NSData *)data {}
+#pragma mark - block
+
+- (void)fetchBlockData {
+    NSURL *url = [NSURL URLWithString:@""];
+    EOCNetworkFetcher *fetcher = [[EOCNetworkFetcher alloc] initWithURL:url];
+    [fetcher startWithCompletionHandler:^(NSData *data) {
+        _data = data;
+    } failureHandler:^(NSError *error) {
+       //handle failure
+    }];
+}
+
+#pragma mark - delegate
+
+- (void)fetchFooData {
+    EOCNetworkFetcher *fetcher = [[EOCNetworkFetcher alloc] init];
+    fetcher.delegate = self;
+}
+
+- (void)networkFetcher:(EOCNetworkFetcher *)fetcher didReceiveData:(NSData *)data {
+    _data = data;
+}
 
 - (void)networkFetcher:(EOCNetworkFetcher *)fetcher didFailWithError:(NSError *)error {}
 
