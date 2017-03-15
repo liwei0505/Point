@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EOCNetworkFetcher.h"
 
 @interface EOCDataModel : NSObject
+
 
 @end
