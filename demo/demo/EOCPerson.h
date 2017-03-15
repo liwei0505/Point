@@ -19,4 +19,6 @@
 - (instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName;
 - (void)addFriend:(EOCPerson *)person;
 - (void)removeFriend:(EOCPerson *)person;
+
+
 @end

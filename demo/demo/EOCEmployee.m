@@ -7,7 +7,6 @@
 //
 
 #import "EOCEmployee.h"
-
 #import "EOCEmployeeDesigner.h"
 #import "EOCEmployeeFinance.h"
 #import "EOCEmployeeDeveloper.h"
@@ -40,7 +39,12 @@
 }
 
 - (void)doADaysWork {
-    
+
+}
+
+#pragma mark - exception test function
+- (void)doSomethingThatMayThrow {
+    NSLog(@"throw exception");
 }
 
 @end

@@ -22,4 +22,7 @@ typedef NS_ENUM(NSUInteger, EOCEmployeeType) {
 //make employees do their respective day's work
 - (void)doADaysWork;
 
+//异常处理测试方法
+- (void)doSomethingThatMayThrow;
+
 @end

@@ -17,6 +17,7 @@ typedef NS_ENUM(NSInteger, demoList) {
     DEMO_AUTOSELECTOR,//动态方法解析
     DEMO_METHODSWIZZLING,//运行时方法交换
     DEMO_DESIGNATEDINITIALIZER,//全能初始化方法
+    DEMO_EXCEPTION,//抛出异常
 };
 
 @interface ViewController ()
@@ -29,7 +30,6 @@ typedef NS_ENUM(NSInteger, demoList) {
     [super viewDidLoad];
     NSInteger type = DEMO_METHODSWIZZLING;
     
-    
     switch (type) {
         case DEMO_CLUSTER:
             [self clusterDemo];
@@ -40,6 +40,8 @@ typedef NS_ENUM(NSInteger, demoList) {
         case DEMO_METHODSWIZZLING:
             [self methodSwizzling];
             break;
+        case DEMO_EXCEPTION:
+            [self exception];
         default:
             break;
     }
@@ -77,5 +79,25 @@ typedef NS_ENUM(NSInteger, demoList) {
     NSLog(@"date = %@",dict.date);
     
 }
+
+#pragma mark - 抛出异常
+//非ARC:
+//relase不能放在try中，因为如果dosome方法抛出异常，则object有泄漏
+- (void)exception {
+//
+//    EOCEmployee *object;
+//    @try {
+//        object = [[EOCEmployee alloc] init];
+//        [object doSomethingThatMayThrow];
+//    } @catch (NSException *exception) {
+//        NSLog(@"there was an error.");
+//    } @finally {
+//        [object release];
+//    }
+}
+//ARC情况下因为不能release，就不能在finally中release，问题就更大了
+//-fobjc-arc-exceptions标志，开启arc安全处理异常功能：OC++会自动开启，arc需手动开启
+//由于开启后自动生成处理异常代码，会导致应用程序变大，降低运行效率。
+//在发现大量异常捕获操作时，应重构代码，用NSError式错误传递法取代异常
 
 @end
