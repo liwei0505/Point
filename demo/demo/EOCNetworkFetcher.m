@@ -18,6 +18,11 @@
         unsigned int didUpdateProgressTo    : 1;
     } _delegateFlags;
 }
+
+@property (strong, nonatomic, readwrite) NSURL *url;
+@property (copy, nonatomic) EOCNetworkFetcherCompletionHandler completionHandler;
+@property (strong, nonatomic) NSData *downloadedData;
+
 @end
 
 @implementation EOCNetworkFetcher
@@ -47,10 +52,23 @@
 
 #pragma mark - block
 - (id)initWithURL:(NSURL *)url {
+    if (self = [super init]) {
+        _url = url;
+    }
     return self;
 }
 
 - (void)startWithCompletionHandler:(EOCNetworkFetcherCompletionHandler)handler failureHandler:(EOCNetworkFetcherErrorHandler)failure {
+    self.completionHandler = handler;
+}
+
+- (void)p_requestCompleted {
+    if (_completionHandler) {
+        _completionHandler(_downloadedData);
+    }
+    //本类保存comletionhandler属性,completionhandler也保留本类且一旦运行过就没有必要保留了
+    //防止循环引用，下载结束置nil保留环就解除
+    self.completionHandler = nil;
 }
 
 @end
