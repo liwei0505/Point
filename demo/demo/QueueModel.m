@@ -82,5 +82,67 @@
     NSLog(@"延迟执行");
 }
 
+#pragma mark - dispatch group 任务分组
+
+- (void)dispatch_group {
+
+    //创建任务组
+    dispatch_group_t dispatch_group_create();
+    //把任务编组：两种方法
+    //1、
+//    dispatch_group_async(<#dispatch_group_t  _Nonnull group#>, <#dispatch_queue_t  _Nonnull queue#>, <#^(void)block#>);
+    //2、指定任务所属的group：需成对出现，enter后没有leave，那么这组任务就永远执行不完
+//    dispatch_group_enter(<#dispatch_group_t  _Nonnull group#>);//使分组任务数递增
+//    dispatch_group_leave(<#dispatch_group_t  _Nonnull group#>);//递减
+    
+}
+
+- (void)dispatch_wait {
+
+    //等待group执行完毕:两种方法
+    //1
+    //    dispatch_group_wait(<#dispatch_group_t  _Nonnull group#>, <#dispatch_time_t timeout#>);
+    /*params：
+     要等待的group
+     等待时间的timeout:函数在等待group执行完毕时，应该阻塞多久
+     执行group时间<timeout retrun 0;否则返回非0
+     DISPATCH_TIME_FOREVER一直等着group执行完，而不会超时
+     */
+    //2
+    //    dispatch_group_notify(<#dispatch_group_t  _Nonnull group#>, <#dispatch_queue_t  _Nonnull queue#>, <#^(void)block#>);
+    //group执行完块会在特定的线程执行：当前线程不阻塞，任务完成得到通知
+    
+    NSDictionary *collection = [NSDictionary dictionary];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t dispatchGroup = dispatch_group_create();
+    for (id object in collection) {
+        dispatch_group_async(dispatchGroup, queue, ^{
+            //[object ];
+        });
+    }
+    
+    dispatch_group_wait(dispatchGroup, DISPATCH_TIME_FOREVER);
+    //continue processing after completing tasks
+    
+    //若当前线程不应该阻塞，可用notify来取代weit
+    dispatch_queue_t notifyQueue = dispatch_get_main_queue();
+    dispatch_group_notify(dispatchGroup, notifyQueue, ^{
+        //continue after completing tesks
+    });
+    
+    //可将任务派发到
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @end
