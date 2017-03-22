@@ -112,25 +112,61 @@
     //    dispatch_group_notify(<#dispatch_group_t  _Nonnull group#>, <#dispatch_queue_t  _Nonnull queue#>, <#^(void)block#>);
     //group执行完块会在特定的线程执行：当前线程不阻塞，任务完成得到通知
     
-    NSDictionary *collection = [NSDictionary dictionary];
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_group_t dispatchGroup = dispatch_group_create();
-    for (id object in collection) {
-        dispatch_group_async(dispatchGroup, queue, ^{
-            //[object ];
+    NSDictionary *collection_a = [NSDictionary dictionary];
+    dispatch_queue_t queue_a = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t dispatchGroup_a = dispatch_group_create();
+    for (id object in collection_a) {
+        dispatch_group_async(dispatchGroup_a, queue_a, ^{
+            //[object performTask];
         });
     }
     
-    dispatch_group_wait(dispatchGroup, DISPATCH_TIME_FOREVER);
+    dispatch_group_wait(dispatchGroup_a, DISPATCH_TIME_FOREVER);
     //continue processing after completing tasks
     
-    //若当前线程不应该阻塞，可用notify来取代weit
-    dispatch_queue_t notifyQueue = dispatch_get_main_queue();
-    dispatch_group_notify(dispatchGroup, notifyQueue, ^{
+    //若当前线程不应该阻塞，可用notify来取代wait
+    dispatch_queue_t notifyQueue_a = dispatch_get_main_queue();
+    dispatch_group_notify(dispatchGroup_a, notifyQueue_a, ^{
         //continue after completing tesks
     });
     
-    //可将任务派发到
+    //可将任务派发到优先级高的线程上执行，同时把所有任务都归入一个group，执行完获得通知
+    NSDictionary *lowPriorityObjects = [NSDictionary dictionary];
+    NSDictionary *highPriorityObjects = [NSDictionary dictionary];
+    
+    dispatch_queue_t lowPriorityQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
+    dispatch_queue_t highPriorityQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    dispatch_group_t dispatchGroup = dispatch_group_create();
+    
+    for (id object in lowPriorityObjects) {
+        dispatch_group_async(dispatchGroup, lowPriorityQueue, ^{
+            //[object performTask];
+        });
+    }
+    
+    for (id object in highPriorityObjects) {
+        dispatch_group_async(dispatchGroup, highPriorityQueue, ^{
+            //[object performTask];
+        });
+    }
+    
+    dispatch_queue_t notifyQueue = dispatch_get_main_queue();
+    dispatch_group_notify(dispatchGroup, notifyQueue, ^{
+        //continue processing after completing tasks
+    });
+
+    //不使用group实现同样效果
+    NSDictionary *collection = [NSDictionary dictionary];
+    dispatch_queue_t queue = dispatch_queue_create("effective", NULL);
+    for (id object in collection) {
+        dispatch_async(queue, ^{
+            //[object perfrom];
+        });
+    }
+    
+    dispatch_async(queue, ^{
+       //continue processing after completing tasks.
+    });
     
 }
 
