@@ -21,6 +21,8 @@
 #####GCD
 队列 栅栏块 延迟
 #####
+缓存NSCache + NSPurgeableData
+#####
 ```oc
     insert code
 ```
