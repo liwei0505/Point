@@ -40,6 +40,8 @@
 		C958C1431E61BBC600E8D721 /* EOCEmployeeDeveloper.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1421E61BBC600E8D721 /* EOCEmployeeDeveloper.m */; };
 		C9ECDD6E1E8A3141008D9765 /* EnumeratorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ECDD6D1E8A3141008D9765 /* EnumeratorObject.m */; };
 		C9ECDD721E8A4C38008D9765 /* CacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ECDD711E8A4C38008D9765 /* CacheObject.m */; };
+		C9ECDD761E8A6108008D9765 /* TimeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ECDD751E8A6108008D9765 /* TimeObject.m */; };
+		C9ECDD791E8A6306008D9765 /* NSTimer+BlocksSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ECDD781E8A6306008D9765 /* NSTimer+BlocksSupport.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +107,10 @@
 		C9ECDD6D1E8A3141008D9765 /* EnumeratorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnumeratorObject.m; sourceTree = "<group>"; };
 		C9ECDD701E8A4C38008D9765 /* CacheObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheObject.h; sourceTree = "<group>"; };
 		C9ECDD711E8A4C38008D9765 /* CacheObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheObject.m; sourceTree = "<group>"; };
+		C9ECDD741E8A6108008D9765 /* TimeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeObject.h; sourceTree = "<group>"; };
+		C9ECDD751E8A6108008D9765 /* TimeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeObject.m; sourceTree = "<group>"; };
+		C9ECDD771E8A6306008D9765 /* NSTimer+BlocksSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+BlocksSupport.h"; sourceTree = "<group>"; };
+		C9ECDD781E8A6306008D9765 /* NSTimer+BlocksSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+BlocksSupport.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +240,7 @@
 		C958C1001E61A4B300E8D721 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				C9ECDD731E8A60F6008D9765 /* NSTimer */,
 				C9ECDD6F1E8A4C03008D9765 /* NSCache */,
 				C9ECDD6B1E8A311B008D9765 /* enumerator */,
 				9B0CB8EE1E850D7500CB2130 /* singleton */,
@@ -347,6 +354,17 @@
 			name = NSCache;
 			sourceTree = "<group>";
 		};
+		C9ECDD731E8A60F6008D9765 /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				C9ECDD741E8A6108008D9765 /* TimeObject.h */,
+				C9ECDD751E8A6108008D9765 /* TimeObject.m */,
+				C9ECDD771E8A6306008D9765 /* NSTimer+BlocksSupport.h */,
+				C9ECDD781E8A6306008D9765 /* NSTimer+BlocksSupport.m */,
+			);
+			name = NSTimer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -425,11 +443,13 @@
 				9B4F76C61E6EAF8C00CA1A09 /* EOCDatabaseManager.m in Sources */,
 				C958C12D1E61B0C400E8D721 /* Person.m in Sources */,
 				C958C11F1E61A53C00E8D721 /* TestView.m in Sources */,
+				C9ECDD761E8A6108008D9765 /* TimeObject.m in Sources */,
 				9B4F76C21E6E845700CA1A09 /* NSCalendar+EOC_Additions.m in Sources */,
 				C958C1431E61BBC600E8D721 /* EOCEmployeeDeveloper.m in Sources */,
 				9B0CB8F11E850DA200CB2130 /* EOCSingle.m in Sources */,
 				C9ECDD721E8A4C38008D9765 /* CacheObject.m in Sources */,
 				9B4A467F1E67E8C9005EB4DD /* EOCRectangle.m in Sources */,
+				C9ECDD791E8A6306008D9765 /* NSTimer+BlocksSupport.m in Sources */,
 				C958C1401E61BAAA00E8D721 /* EOCEmployeeFinance.m in Sources */,
 				9B4A468A1E6944F2005EB4DD /* EOCNetworkFetcher.m in Sources */,
 				9BAE18221E65477900A3B151 /* EOCAutoDictionary.m in Sources */,
