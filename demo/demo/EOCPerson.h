@@ -15,6 +15,7 @@
 
 @property (copy, nonatomic, readonly) NSString *firstName;
 @property (copy, nonatomic, readonly) NSString *lastName;
+@property (assign, nonatomic) NSUInteger age;
 
 - (instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName;
 - (void)addFriend:(EOCPerson *)person;
