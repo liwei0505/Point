@@ -20,6 +20,7 @@
 		9B4FA6F01E66AA6A001A0003 /* NSString+EOCMyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FA6EF1E66AA6A001A0003 /* NSString+EOCMyAdditions.m */; };
 		9BAE18221E65477900A3B151 /* EOCAutoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE18211E65477900A3B151 /* EOCAutoDictionary.m */; };
 		C9281BD41F3F3E3D005CCB34 /* AVFoundationBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = C9281BD31F3F3E3D005CCB34 /* AVFoundationBasic.m */; };
+		C9281BD81F44770A005CCB34 /* ImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C9281BD71F44770A005CCB34 /* ImageUtils.m */; };
 		C958C1031E61A4B300E8D721 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1021E61A4B300E8D721 /* main.m */; };
 		C958C1061E61A4B300E8D721 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1051E61A4B300E8D721 /* AppDelegate.m */; };
 		C958C1091E61A4B300E8D721 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1081E61A4B300E8D721 /* ViewController.m */; };
@@ -73,6 +74,8 @@
 		9BAE18211E65477900A3B151 /* EOCAutoDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCAutoDictionary.m; sourceTree = "<group>"; };
 		C9281BD21F3F3E3D005CCB34 /* AVFoundationBasic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVFoundationBasic.h; sourceTree = "<group>"; };
 		C9281BD31F3F3E3D005CCB34 /* AVFoundationBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVFoundationBasic.m; sourceTree = "<group>"; };
+		C9281BD61F44770A005CCB34 /* ImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtils.h; sourceTree = "<group>"; };
+		C9281BD71F44770A005CCB34 /* ImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtils.m; sourceTree = "<group>"; };
 		C958C0FE1E61A4B300E8D721 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C958C1021E61A4B300E8D721 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C958C1041E61A4B300E8D721 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -232,6 +235,15 @@
 			name = AVFoundation;
 			sourceTree = "<group>";
 		};
+		C9281BD51F4476D8005CCB34 /* 马赛克 */ = {
+			isa = PBXGroup;
+			children = (
+				C9281BD61F44770A005CCB34 /* ImageUtils.h */,
+				C9281BD71F44770A005CCB34 /* ImageUtils.m */,
+			);
+			name = "马赛克";
+			sourceTree = "<group>";
+		};
 		C958C0F51E61A4B300E8D721 = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +264,7 @@
 		C958C1001E61A4B300E8D721 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				C9281BD51F4476D8005CCB34 /* 马赛克 */,
 				C9281BD11F3F3D15005CCB34 /* AVFoundation */,
 				C9ECDD731E8A60F6008D9765 /* NSTimer */,
 				C9ECDD6F1E8A4C03008D9765 /* NSCache */,
@@ -466,6 +479,7 @@
 				C958C1401E61BAAA00E8D721 /* EOCEmployeeFinance.m in Sources */,
 				9B4A468A1E6944F2005EB4DD /* EOCNetworkFetcher.m in Sources */,
 				9BAE18221E65477900A3B151 /* EOCAutoDictionary.m in Sources */,
+				C9281BD81F44770A005CCB34 /* ImageUtils.m in Sources */,
 				C958C13D1E61BA9000E8D721 /* EOCEmployeeDesigner.m in Sources */,
 				C958C1261E61AEE600E8D721 /* SocketViewController.m in Sources */,
 				9B4A46861E67FCFE005EB4DD /* EOCPerson.m in Sources */,
