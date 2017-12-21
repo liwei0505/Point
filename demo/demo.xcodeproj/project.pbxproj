@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9B06703A1E7B75B7004FA72C /* QueueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0670391E7B75B7004FA72C /* QueueModel.m */; };
 		9B0CB8F11E850DA200CB2130 /* EOCSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0CB8F01E850DA200CB2130 /* EOCSingle.m */; };
+		9B286A4A1FEBCF620055AB00 /* HitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B286A491FEBCF620055AB00 /* HitTestView.m */; };
+		9B286A4D1FEBCF750055AB00 /* UIView+VVHitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B286A4C1FEBCF750055AB00 /* UIView+VVHitTest.m */; };
+		9B286A501FEBCF900055AB00 /* TouchEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B286A4E1FEBCF900055AB00 /* TouchEventsViewController.m */; };
 		9B4A467F1E67E8C9005EB4DD /* EOCRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A467E1E67E8C9005EB4DD /* EOCRectangle.m */; };
 		9B4A46821E67ECC8005EB4DD /* EOCSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A46811E67ECC8005EB4DD /* EOCSquare.m */; };
 		9B4A46861E67FCFE005EB4DD /* EOCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A46851E67FCFE005EB4DD /* EOCPerson.m */; };
@@ -51,6 +54,12 @@
 		9B0670391E7B75B7004FA72C /* QueueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueModel.m; sourceTree = "<group>"; };
 		9B0CB8EF1E850DA200CB2130 /* EOCSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCSingle.h; sourceTree = "<group>"; };
 		9B0CB8F01E850DA200CB2130 /* EOCSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCSingle.m; sourceTree = "<group>"; };
+		9B286A481FEBCF620055AB00 /* HitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestView.h; sourceTree = "<group>"; };
+		9B286A491FEBCF620055AB00 /* HitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestView.m; sourceTree = "<group>"; };
+		9B286A4B1FEBCF750055AB00 /* UIView+VVHitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VVHitTest.h"; sourceTree = "<group>"; };
+		9B286A4C1FEBCF750055AB00 /* UIView+VVHitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VVHitTest.m"; sourceTree = "<group>"; };
+		9B286A4E1FEBCF900055AB00 /* TouchEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchEventsViewController.m; sourceTree = "<group>"; };
+		9B286A4F1FEBCF900055AB00 /* TouchEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchEventsViewController.h; sourceTree = "<group>"; };
 		9B4A467D1E67E8C9005EB4DD /* EOCRectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCRectangle.h; sourceTree = "<group>"; };
 		9B4A467E1E67E8C9005EB4DD /* EOCRectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCRectangle.m; sourceTree = "<group>"; };
 		9B4A46801E67ECC8005EB4DD /* EOCSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCSquare.h; sourceTree = "<group>"; };
@@ -147,6 +156,19 @@
 				9B0CB8F01E850DA200CB2130 /* EOCSingle.m */,
 			);
 			name = singleton;
+			sourceTree = "<group>";
+		};
+		9B286A471FEBCF4D0055AB00 /* 事件分发 */ = {
+			isa = PBXGroup;
+			children = (
+				9B286A4F1FEBCF900055AB00 /* TouchEventsViewController.h */,
+				9B286A4E1FEBCF900055AB00 /* TouchEventsViewController.m */,
+				9B286A4B1FEBCF750055AB00 /* UIView+VVHitTest.h */,
+				9B286A4C1FEBCF750055AB00 /* UIView+VVHitTest.m */,
+				9B286A481FEBCF620055AB00 /* HitTestView.h */,
+				9B286A491FEBCF620055AB00 /* HitTestView.m */,
+			);
+			name = "事件分发";
 			sourceTree = "<group>";
 		};
 		9B4A467C1E67E844005EB4DD /* designatedInitializer */ = {
@@ -264,6 +286,7 @@
 		C958C1001E61A4B300E8D721 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				9B286A471FEBCF4D0055AB00 /* 事件分发 */,
 				C9281BD51F4476D8005CCB34 /* 马赛克 */,
 				C9281BD11F3F3D15005CCB34 /* AVFoundation */,
 				C9ECDD731E8A60F6008D9765 /* NSTimer */,
@@ -472,6 +495,7 @@
 				C9ECDD761E8A6108008D9765 /* TimeObject.m in Sources */,
 				9B4F76C21E6E845700CA1A09 /* NSCalendar+EOC_Additions.m in Sources */,
 				C958C1431E61BBC600E8D721 /* EOCEmployeeDeveloper.m in Sources */,
+				9B286A4A1FEBCF620055AB00 /* HitTestView.m in Sources */,
 				9B0CB8F11E850DA200CB2130 /* EOCSingle.m in Sources */,
 				C9ECDD721E8A4C38008D9765 /* CacheObject.m in Sources */,
 				9B4A467F1E67E8C9005EB4DD /* EOCRectangle.m in Sources */,
@@ -490,9 +514,11 @@
 				C9281BD41F3F3E3D005CCB34 /* AVFoundationBasic.m in Sources */,
 				9B4F76BF1E6E7CBD00CA1A09 /* EOCPerson+Friendship.m in Sources */,
 				9B4FA6F01E66AA6A001A0003 /* NSString+EOCMyAdditions.m in Sources */,
+				9B286A4D1FEBCF750055AB00 /* UIView+VVHitTest.m in Sources */,
 				C958C1031E61A4B300E8D721 /* main.m in Sources */,
 				C9ECDD6E1E8A3141008D9765 /* EnumeratorObject.m in Sources */,
 				9B06703A1E7B75B7004FA72C /* QueueModel.m in Sources */,
+				9B286A501FEBCF900055AB00 /* TouchEventsViewController.m in Sources */,
 				C958C1301E61B10600E8D721 /* SQLiteViewController.m in Sources */,
 				9B4A468D1E69467A005EB4DD /* EOCDataModel.m in Sources */,
 			);
