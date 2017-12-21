@@ -22,6 +22,8 @@
 队列 栅栏块 延迟<br/>
 #####Cache<br/>
 缓存NSCache + NSPurgeableData<br/>
+#####事件分发<br/>
+UIView(hitTest)<br/>
 #####
 ```oc
     insert code
