@@ -40,6 +40,9 @@
 		C958C13D1E61BA9000E8D721 /* EOCEmployeeDesigner.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C13C1E61BA9000E8D721 /* EOCEmployeeDesigner.m */; };
 		C958C1401E61BAAA00E8D721 /* EOCEmployeeFinance.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C13F1E61BAAA00E8D721 /* EOCEmployeeFinance.m */; };
 		C958C1431E61BBC600E8D721 /* EOCEmployeeDeveloper.m in Sources */ = {isa = PBXBuildFile; fileRef = C958C1421E61BBC600E8D721 /* EOCEmployeeDeveloper.m */; };
+		C97EA2141FF7D1C7009743C9 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = C97EA2121FF7D1C6009743C9 /* NSArray+Log.m */; };
+		C97EA2181FF7D206009743C9 /* getCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C97EA2171FF7D206009743C9 /* getCache.m */; };
+		C97EA21B1FF7D73D009743C9 /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = C97EA21A1FF7D73D009743C9 /* LoginService.m */; };
 		C9ECDD6E1E8A3141008D9765 /* EnumeratorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ECDD6D1E8A3141008D9765 /* EnumeratorObject.m */; };
 		C9ECDD721E8A4C38008D9765 /* CacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ECDD711E8A4C38008D9765 /* CacheObject.m */; };
 		C9ECDD761E8A6108008D9765 /* TimeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ECDD751E8A6108008D9765 /* TimeObject.m */; };
@@ -109,6 +112,12 @@
 		C958C13F1E61BAAA00E8D721 /* EOCEmployeeFinance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCEmployeeFinance.m; sourceTree = "<group>"; };
 		C958C1411E61BBC600E8D721 /* EOCEmployeeDeveloper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCEmployeeDeveloper.h; sourceTree = "<group>"; };
 		C958C1421E61BBC600E8D721 /* EOCEmployeeDeveloper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCEmployeeDeveloper.m; sourceTree = "<group>"; };
+		C97EA2121FF7D1C6009743C9 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		C97EA2131FF7D1C6009743C9 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		C97EA2161FF7D205009743C9 /* getCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getCache.h; sourceTree = "<group>"; };
+		C97EA2171FF7D206009743C9 /* getCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getCache.m; sourceTree = "<group>"; };
+		C97EA2191FF7D73D009743C9 /* LoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
+		C97EA21A1FF7D73D009743C9 /* LoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
 		C9ECDD6C1E8A3141008D9765 /* EnumeratorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumeratorObject.h; sourceTree = "<group>"; };
 		C9ECDD6D1E8A3141008D9765 /* EnumeratorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnumeratorObject.m; sourceTree = "<group>"; };
 		C9ECDD701E8A4C38008D9765 /* CacheObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheObject.h; sourceTree = "<group>"; };
@@ -183,6 +192,8 @@
 		9B4F76BC1E6E7BE300CA1A09 /* categry */ = {
 			isa = PBXGroup;
 			children = (
+				C97EA2131FF7D1C6009743C9 /* NSArray+Log.h */,
+				C97EA2121FF7D1C6009743C9 /* NSArray+Log.m */,
 				9B4F76BD1E6E7CBD00CA1A09 /* EOCPerson+Friendship.h */,
 				9B4F76BE1E6E7CBD00CA1A09 /* EOCPerson+Friendship.m */,
 				9B4F76C01E6E845700CA1A09 /* NSCalendar+EOC_Additions.h */,
@@ -264,6 +275,7 @@
 		C958C1001E61A4B300E8D721 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				C97EA2151FF7D1DB009743C9 /* aboutNet */,
 				C9281BD51F4476D8005CCB34 /* 马赛克 */,
 				C9281BD11F3F3D15005CCB34 /* AVFoundation */,
 				C9ECDD731E8A60F6008D9765 /* NSTimer */,
@@ -360,6 +372,17 @@
 				C958C1421E61BBC600E8D721 /* EOCEmployeeDeveloper.m */,
 			);
 			name = "ClassCluster(类族)";
+			sourceTree = "<group>";
+		};
+		C97EA2151FF7D1DB009743C9 /* aboutNet */ = {
+			isa = PBXGroup;
+			children = (
+				C97EA2191FF7D73D009743C9 /* LoginService.h */,
+				C97EA21A1FF7D73D009743C9 /* LoginService.m */,
+				C97EA2161FF7D205009743C9 /* getCache.h */,
+				C97EA2171FF7D206009743C9 /* getCache.m */,
+			);
+			name = aboutNet;
 			sourceTree = "<group>";
 		};
 		C9ECDD6B1E8A311B008D9765 /* enumerator */ = {
@@ -471,6 +494,7 @@
 				C958C11F1E61A53C00E8D721 /* TestView.m in Sources */,
 				C9ECDD761E8A6108008D9765 /* TimeObject.m in Sources */,
 				9B4F76C21E6E845700CA1A09 /* NSCalendar+EOC_Additions.m in Sources */,
+				C97EA21B1FF7D73D009743C9 /* LoginService.m in Sources */,
 				C958C1431E61BBC600E8D721 /* EOCEmployeeDeveloper.m in Sources */,
 				9B0CB8F11E850DA200CB2130 /* EOCSingle.m in Sources */,
 				C9ECDD721E8A4C38008D9765 /* CacheObject.m in Sources */,
@@ -485,7 +509,9 @@
 				9B4A46861E67FCFE005EB4DD /* EOCPerson.m in Sources */,
 				C958C11B1E61A50E00E8D721 /* BlockViewController.m in Sources */,
 				9B4A46821E67ECC8005EB4DD /* EOCSquare.m in Sources */,
+				C97EA2141FF7D1C7009743C9 /* NSArray+Log.m in Sources */,
 				C958C12C1E61B0C400E8D721 /* SQLiteManager.m in Sources */,
+				C97EA2181FF7D206009743C9 /* getCache.m in Sources */,
 				C958C1371E61B5E400E8D721 /* EOCEmployee.m in Sources */,
 				C9281BD41F3F3E3D005CCB34 /* AVFoundationBasic.m in Sources */,
 				9B4F76BF1E6E7CBD00CA1A09 /* EOCPerson+Friendship.m in Sources */,
