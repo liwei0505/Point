@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OrderDemo.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
+        OrderDemo *o = [OrderDemo new];
+        [o test3];
+        [o test4];
     }
     return 0;
 }
