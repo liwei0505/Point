@@ -47,6 +47,8 @@
 		C97EA2141FF7D1C7009743C9 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = C97EA2121FF7D1C6009743C9 /* NSArray+Log.m */; };
 		C97EA2181FF7D206009743C9 /* getCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C97EA2171FF7D206009743C9 /* getCache.m */; };
 		C97EA21B1FF7D73D009743C9 /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = C97EA21A1FF7D73D009743C9 /* LoginService.m */; };
+		C9D602AB20502EF200B306EF /* OrderDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D602AA20502EF200B306EF /* OrderDemo.m */; };
+		C9D602AE20502F8200B306EF /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D602AD20502F8200B306EF /* OrderViewController.m */; };
 		C9ECDD6E1E8A3141008D9765 /* EnumeratorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ECDD6D1E8A3141008D9765 /* EnumeratorObject.m */; };
 		C9ECDD721E8A4C38008D9765 /* CacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ECDD711E8A4C38008D9765 /* CacheObject.m */; };
 		C9ECDD761E8A6108008D9765 /* TimeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ECDD751E8A6108008D9765 /* TimeObject.m */; };
@@ -130,6 +132,10 @@
 		C97EA2171FF7D206009743C9 /* getCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getCache.m; sourceTree = "<group>"; };
 		C97EA2191FF7D73D009743C9 /* LoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
 		C97EA21A1FF7D73D009743C9 /* LoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
+		C9D602A920502EF200B306EF /* OrderDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderDemo.h; sourceTree = "<group>"; };
+		C9D602AA20502EF200B306EF /* OrderDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderDemo.m; sourceTree = "<group>"; };
+		C9D602AC20502F8200B306EF /* OrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		C9D602AD20502F8200B306EF /* OrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
 		C9ECDD6C1E8A3141008D9765 /* EnumeratorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumeratorObject.h; sourceTree = "<group>"; };
 		C9ECDD6D1E8A3141008D9765 /* EnumeratorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnumeratorObject.m; sourceTree = "<group>"; };
 		C9ECDD701E8A4C38008D9765 /* CacheObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheObject.h; sourceTree = "<group>"; };
@@ -302,6 +308,7 @@
 		C958C1001E61A4B300E8D721 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				C9D602A820502ED700B306EF /* order */,
 				C97EA2151FF7D1DB009743C9 /* aboutNet */,
 				9B286A471FEBCF4D0055AB00 /* 事件分发 */,
 				C9281BD51F4476D8005CCB34 /* 马赛克 */,
@@ -411,6 +418,17 @@
 				C97EA2171FF7D206009743C9 /* getCache.m */,
 			);
 			name = aboutNet;
+			sourceTree = "<group>";
+		};
+		C9D602A820502ED700B306EF /* order */ = {
+			isa = PBXGroup;
+			children = (
+				C9D602A920502EF200B306EF /* OrderDemo.h */,
+				C9D602AA20502EF200B306EF /* OrderDemo.m */,
+				C9D602AC20502F8200B306EF /* OrderViewController.h */,
+				C9D602AD20502F8200B306EF /* OrderViewController.m */,
+			);
+			name = order;
 			sourceTree = "<group>";
 		};
 		C9ECDD6B1E8A311B008D9765 /* enumerator */ = {
@@ -526,6 +544,7 @@
 				C958C1431E61BBC600E8D721 /* EOCEmployeeDeveloper.m in Sources */,
 				9B286A541FEBD5FF0055AB00 /* UIView+ViewController.m in Sources */,
 				9B286A4A1FEBCF620055AB00 /* HitTestView.m in Sources */,
+				C9D602AE20502F8200B306EF /* OrderViewController.m in Sources */,
 				9B0CB8F11E850DA200CB2130 /* EOCSingle.m in Sources */,
 				C9ECDD721E8A4C38008D9765 /* CacheObject.m in Sources */,
 				9B4A467F1E67E8C9005EB4DD /* EOCRectangle.m in Sources */,
@@ -548,6 +567,7 @@
 				9B4FA6F01E66AA6A001A0003 /* NSString+EOCMyAdditions.m in Sources */,
 				9B286A4D1FEBCF750055AB00 /* UIView+VVHitTest.m in Sources */,
 				C958C1031E61A4B300E8D721 /* main.m in Sources */,
+				C9D602AB20502EF200B306EF /* OrderDemo.m in Sources */,
 				C9ECDD6E1E8A3141008D9765 /* EnumeratorObject.m in Sources */,
 				9B06703A1E7B75B7004FA72C /* QueueModel.m in Sources */,
 				9B286A501FEBCF900055AB00 /* TouchEventsViewController.m in Sources */,

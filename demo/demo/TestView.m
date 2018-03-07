@@ -23,7 +23,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
     [self.testButton addTarget:self action:@selector(testButtonClick:) forControlEvents:UIControlEventTouchUpInside];
 }
 
