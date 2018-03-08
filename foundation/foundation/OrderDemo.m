@@ -47,8 +47,8 @@
 //升序
     NSArray *stringArray = [NSArray arrayWithObjects:@"abc 21", @"abc 1", @"abc 12",@"abc 13",@"abc 05",nil];
     NSComparator sortBlock = ^(id string1, id string2) {
-//        return [string1 compare:string2];
-        return (NSComparisonResult)NSOrderedDescending;
+        return [string1 compare:string2];
+//        return (NSComparisonResult)NSOrderedDescending;
     };
     
     //利用数组的sortedArrayUsingComparator调用 NSComparator ，obj1和obj2指的数组中的对象
@@ -57,7 +57,8 @@
     
     //或者(升序)
     NSArray *sortArray1 = [stringArray sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
-        return [obj1 compare:obj2];
+        NSComparisonResult result = [obj1 compare:obj2];
+        return result;
     }];
     NSLog(@"sortArray1 = %@", sortArray1);
 }
@@ -65,7 +66,8 @@
 - (void)test4 {
 //降序
     NSArray *numArray = [NSArray arrayWithObjects:@1,@21,@12,@13,@05,nil];
-    NSArray *sortNumArray = [numArray sortedArrayUsingComparator: ^(id obj1, id obj2) {
+    
+    NSComparator com = ^(id obj1, id obj2) {
         if ([obj1 integerValue] > [obj2 integerValue]) {
             return (NSComparisonResult)NSOrderedAscending;
         }
@@ -73,7 +75,18 @@
             return (NSComparisonResult)NSOrderedDescending;
         }
         return (NSComparisonResult)NSOrderedSame;
-    }];
+    };
+    
+    NSArray *sortNumArray = [numArray sortedArrayUsingComparator:com];
+//    NSArray *sortNumArray = [numArray sortedArrayUsingComparator: ^(id obj1, id obj2) {
+//        if ([obj1 integerValue] > [obj2 integerValue]) {
+//            return (NSComparisonResult)NSOrderedAscending;
+//        }
+//        if ([obj1 integerValue] < [obj2 integerValue]) {
+//            return (NSComparisonResult)NSOrderedDescending;
+//        }
+//        return (NSComparisonResult)NSOrderedSame;
+//    }];
     NSLog(@"sortNumArray = %@",sortNumArray);
 }
 
