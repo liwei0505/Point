@@ -13,9 +13,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
-        OrderDemo *o = [OrderDemo new];
-        [o test3];
-        [o test4];
+        NSMutableArray *array = [NSMutableArray array];
+        id obj = [array objectAtIndex:0];
     }
     return 0;
 }
