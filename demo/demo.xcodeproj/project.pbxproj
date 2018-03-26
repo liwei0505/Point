@@ -267,13 +267,13 @@
 			name = autoSelector;
 			sourceTree = "<group>";
 		};
-		9BCFC3F420649DCF00E5E47F /* NSThread */ = {
+		9BCFC3F420649DCF00E5E47F /* 多线程 */ = {
 			isa = PBXGroup;
 			children = (
 				9BCFC3F520649F2900E5E47F /* NSThreadDemoController.h */,
 				9BCFC3F620649F2900E5E47F /* NSThreadDemoController.m */,
 			);
-			name = NSThread;
+			name = "多线程";
 			sourceTree = "<group>";
 		};
 		C9281BD11F3F3D15005CCB34 /* AVFoundation */ = {
@@ -314,7 +314,7 @@
 		C958C1001E61A4B300E8D721 /* demo */ = {
 			isa = PBXGroup;
 			children = (
-				9BCFC3F420649DCF00E5E47F /* NSThread */,
+				9BCFC3F420649DCF00E5E47F /* 多线程 */,
 				C97EA2151FF7D1DB009743C9 /* aboutNet */,
 				9B286A471FEBCF4D0055AB00 /* 事件分发 */,
 				C9281BD51F4476D8005CCB34 /* 马赛克 */,
