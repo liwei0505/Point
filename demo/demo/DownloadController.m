@@ -33,5 +33,11 @@
     [request setValue:rangeStr forHTTPHeaderField:@"Range"];
 }
 
+- (void)download {
+//    CFRunLoopRun();
+//    CFRunLoopStop(CFRunLoopGetCurrent());
+    
+//    [[NSRunLoop currentRunLoop] run]
+}
 
 @end
