@@ -8,6 +8,8 @@
 
 #import "BlockViewController.h"
 #import "TestView.h"
+typedef void(^captureBlk)();
+captureBlk capture2;
 
 @interface BlockViewController ()
 
@@ -25,9 +27,37 @@
     //    [self queryOutParam];
     //    [self changeOutParam];
     //    [self testBlockAsParam];
-    self.testView = [TestView createTestView];
+//    self.testView = [TestView createTestView];
     
+    [self cap];
+    capture2();
+//    [self block];
 }
+
+- (void)block {
+    __block int num = 10;
+    NSLog(@"%p",&num);
+    void (^blo)() = ^() {
+        sleep(3);
+        NSLog(@"==%d==%p==%@",num,&num,[NSThread currentThread]);
+        num = 1000;
+    };
+    num = 20;
+    blo();
+    NSLog(@"==%d===%p==%@",num,&num,[NSThread currentThread]);
+}
+
+- (void)cap {
+    int cap = 1;
+    NSLog(@"%p",&cap);
+    capture2 = ^(){
+        NSLog(@"num=%d==%p",cap,&cap);
+    };
+    cap = 2;
+    NSLog(@"num=%d==%p",cap,&cap);
+}
+
+
 
 //测试控制器与testView间blok调用
 //此方法调用一次 testview中block执行一次
@@ -38,6 +68,16 @@
 //    }];
 //}
 
+#pragma mark - block递归
+/*
+ block必须是全局变量或者静态变量
+ 保证程序启动的时候代码块变量就初始化了，可以递归
+*/
+static void (^const blocks)(int) = ^(int i) {
+    if (i) {
+        blocks(i-1);
+    }
+};
 
 /*六、block作为参数传递*/
 

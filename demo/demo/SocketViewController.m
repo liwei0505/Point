@@ -29,7 +29,7 @@
 
 @implementation SocketViewController
 - (IBAction)connBtn:(id)sender {
-    
+
     BOOL result = [self connectToHost:self.hostText.text port:self.portText.text.intValue];
     self.recLabel.text = result ? @"成功" : @"失败";
 }
