@@ -7,14 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OrderDemo.h"
+#include "SortHelper.hpp"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
-        NSMutableArray *array = [NSMutableArray array];
-        id obj = [array objectAtIndex:0];
+        
+        int n = 10;
+        int *arr = SortHelper::generateRandomArray(n, 5, 9);
+        for (int i=0; i<n; i++) {
+            NSLog(@"%d",arr[i]);
+        }
+//        getchar(); //防止屏幕退出，接收一个字符才退出
+        
     }
     return 0;
 }
+
+

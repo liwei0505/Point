@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C9D602BC2050300F00B306EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D602BB2050300F00B306EF /* main.m */; };
+		9B8F2F5B20B6D0460075A474 /* Tips.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F2F5A20B6D0460075A474 /* Tips.m */; };
+		9B8F2F6220B6D5B50075A474 /* SortHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F2F6020B6D5B50075A474 /* SortHelper.cpp */; };
+		9BA4FC0A20946F5300157100 /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA4FC0920946F5300157100 /* Father.m */; };
+		9BA4FC0D20946F6700157100 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA4FC0C20946F6700157100 /* Son.m */; };
+		C9D602BC2050300F00B306EF /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9D602BB2050300F00B306EF /* main.mm */; };
 		C9D602C4205034F900B306EF /* OrderDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D602C3205034F900B306EF /* OrderDemo.m */; };
 /* End PBXBuildFile section */
 
@@ -24,8 +28,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B8F2F5920B6D0460075A474 /* Tips.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tips.h; sourceTree = "<group>"; };
+		9B8F2F5A20B6D0460075A474 /* Tips.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tips.m; sourceTree = "<group>"; };
+		9B8F2F6020B6D5B50075A474 /* SortHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SortHelper.cpp; sourceTree = "<group>"; };
+		9B8F2F6120B6D5B50075A474 /* SortHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SortHelper.hpp; sourceTree = "<group>"; };
+		9BA4FC0820946F5300157100 /* Father.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Father.h; sourceTree = "<group>"; };
+		9BA4FC0920946F5300157100 /* Father.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Father.m; sourceTree = "<group>"; };
+		9BA4FC0B20946F6700157100 /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
+		9BA4FC0C20946F6700157100 /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
 		C9D602B82050300F00B306EF /* foundation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = foundation; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9D602BB2050300F00B306EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9D602BB2050300F00B306EF /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		C9D602C2205034F900B306EF /* OrderDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderDemo.h; sourceTree = "<group>"; };
 		C9D602C3205034F900B306EF /* OrderDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +53,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B8F2F5420B6C8AA0075A474 /* c++ */ = {
+			isa = PBXGroup;
+			children = (
+				9B8F2F6020B6D5B50075A474 /* SortHelper.cpp */,
+				9B8F2F6120B6D5B50075A474 /* SortHelper.hpp */,
+			);
+			path = "c++";
+			sourceTree = "<group>";
+		};
+		9B8F2F5820B6D0270075A474 /* ocTips */ = {
+			isa = PBXGroup;
+			children = (
+				9B8F2F5C20B6D0D00075A474 /* tip1 */,
+				C9D602C2205034F900B306EF /* OrderDemo.h */,
+				C9D602C3205034F900B306EF /* OrderDemo.m */,
+				9B8F2F5920B6D0460075A474 /* Tips.h */,
+				9B8F2F5A20B6D0460075A474 /* Tips.m */,
+			);
+			path = ocTips;
+			sourceTree = "<group>";
+		};
+		9B8F2F5C20B6D0D00075A474 /* tip1 */ = {
+			isa = PBXGroup;
+			children = (
+				9BA4FC0820946F5300157100 /* Father.h */,
+				9BA4FC0920946F5300157100 /* Father.m */,
+				9BA4FC0B20946F6700157100 /* Son.h */,
+				9BA4FC0C20946F6700157100 /* Son.m */,
+			);
+			path = tip1;
+			sourceTree = "<group>";
+		};
 		C9D602AF2050300F00B306EF = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +104,9 @@
 		C9D602BA2050300F00B306EF /* foundation */ = {
 			isa = PBXGroup;
 			children = (
-				C9D602BB2050300F00B306EF /* main.m */,
-				C9D602C2205034F900B306EF /* OrderDemo.h */,
-				C9D602C3205034F900B306EF /* OrderDemo.m */,
+				9B8F2F5820B6D0270075A474 /* ocTips */,
+				9B8F2F5420B6C8AA0075A474 /* c++ */,
+				C9D602BB2050300F00B306EF /* main.mm */,
 			);
 			path = foundation;
 			sourceTree = "<group>";
@@ -124,7 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9D602BC2050300F00B306EF /* main.m in Sources */,
+				9BA4FC0D20946F6700157100 /* Son.m in Sources */,
+				9B8F2F6220B6D5B50075A474 /* SortHelper.cpp in Sources */,
+				C9D602BC2050300F00B306EF /* main.mm in Sources */,
+				9B8F2F5B20B6D0460075A474 /* Tips.m in Sources */,
+				9BA4FC0A20946F5300157100 /* Father.m in Sources */,
 				C9D602C4205034F900B306EF /* OrderDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +270,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;

@@ -19,6 +19,21 @@
 //NSComparisonResult和NSComparator
 @implementation OrderDemo
 
+- (void)test5 {
+
+}
+
+- (void)perform {
+    //    [self performSelector:@selector(log)];//主线程
+    [self performSelectorInBackground:@selector(log) withObject:nil];
+}
+
+- (void)log {
+    for (int i=0; i<10; i++) {
+        NSLog(@"%@==%d",[NSThread currentThread],i);
+    }
+}
+
 - (void)test1 {
     NSString *a = @"aaaA";//'A'的ASCII码值是65
     NSString *b = @"aaaa";//'a'的ASCII码值是97
