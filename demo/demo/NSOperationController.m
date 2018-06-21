@@ -92,7 +92,7 @@
 }
 
 #pragma mark - 暂停/继续
-//suspended 队列一旦被挂起就回暂停调度任务
+//suspended 队列一旦被挂起就会暂停调度任务
 ///挂起的是队列，不会影响当前正在执行的操作：
 ///队列中的任务暂停执行，但已经分配线程执行的任务不会暂停
 ///所以点击暂停按钮可能还会有执行结果显示出来
@@ -105,7 +105,7 @@
     }
     
     self.queue.suspended = !self.queue.suspended;
-    //如果队列被挂起 operationcount包括没有执行完成的操作数（正在线程主执行的任务数）
+    //如果队列被挂起 operationcount包括没有执行完成的操作数（正在线程中执行的任务数）
     if (self.queue.isSuspended) {
         NSLog(@"stop-%tu",self.queue.operationCount);
     } else {

@@ -21,12 +21,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self performSelector:@selector(a)];
+    
 }
 
+- (void)a {
+    NSLog(@"%@",[NSThread currentThread]);
+ 
+}
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
 //    [Singleton test];
-    [self demo12];
+    [self semaphoreDemo];
+}
+
+#pragma mark - 信号量dispatch_semaphore_t，使用信号量来同步数据
+/*
+ 当一个信号量被信号通知，其计数会被增加。当一个线程在一个信号量上等待时，
+ 线程会被阻塞（如果有必要的话），直至计数器大于零，然后线程会减少这个计数
+*/
+/*
+ 原理：
+ 1.创建信号量总数为0
+ 2.执行到wait时信号量-1小于0，所以阻塞（注意：此处分情况阻塞，如果去掉[mutableArray addObject:@(101)];只有一个输出就不阻塞，很智能，厉害！）
+ 3.wait阻塞，block执行，执行到signal，信号量+1，大于0，此时跳到wait后继续执行
+ */
+- (void)semaphoreDemo {
+    //信号量传入参数0 表示没有资源，非0 表示有资源，可以理解为参数总量为0
+    int p = 0;
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);//创建信号参数必须大于或等于0
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:0];
+    //模仿异步网络请求
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        for (int i=0; i<10; i++) {
+            [mutableArray addObject:@(i)];
+        }
+        long runS = dispatch_semaphore_signal(semaphore);//发送信号，信号总量+1
+        NSLog(@"%d****%ld******%@**%@",p,runS, mutableArray,[NSThread currentThread]);
+    });
+    //信号等待时 资源数-1 阻塞当前线程
+    //当信号总量少于0的时候就会一直等待，否则就可以正常的执行，并让信号总量-1
+    //DISPATCH_TIME_FOREVER 一直等待，也可以自定义设置等待时间dispatch_time_t类型：两种方法创建dispatch_time和dispatch_walltime
+    long waitSig = dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);//等待信号
+    [mutableArray addObject:@(101)];
+    NSLog(@"%d===%ld===%@==%@",p,waitSig, mutableArray,[NSThread currentThread]);
+    NSLog(@"执行到这了");
 }
 
 #pragma mark - 调度组
