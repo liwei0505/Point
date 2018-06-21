@@ -21,8 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self performSelector:@selector(a)];
+    
 }
 
+- (void)a {
+    NSLog(@"%@",[NSThread currentThread]);
+ 
+}
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
 //    [Singleton test];

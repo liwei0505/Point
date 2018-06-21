@@ -8,21 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #include "SortHelper.hpp"
-
+#import <objc/message.h>
+#import "Person.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        Person *p = [Person alloc];
+        p = [p init];
         
-        int n = 10;
-        int *arr = SortHelper::generateRandomArray(n, 5, 9);
-        for (int i=0; i<n; i++) {
-            NSLog(@"%d",arr[i]);
-        }
 //        getchar(); //防止屏幕退出，接收一个字符才退出
-        
     }
     return 0;
 }
 
+void cppSortDemo() {
+    int n = 10;
+    int *arr = SortHelper::generateRandomArray(n, 5, 9);
+    for (int i=0; i<n; i++) {
+        NSLog(@"%d",arr[i]);
+    }
+}
 

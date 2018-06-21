@@ -7,7 +7,7 @@
 //
 
 #import "SQLiteViewController.h"
-#import "Person.h"
+#import "SQLPerson.h"
 #import "SQLiteManager.h"
 
 @interface SQLiteViewController ()
@@ -29,7 +29,7 @@
 -(void)demoSelectPerson{
     
     NSArray *array = [NSArray array];
-    Person *p = [[Person alloc]init];
+    SQLPerson *p = [[SQLPerson alloc]init];
     array = [p selectPerson];
     NSLog(@"%@",array);
 }
@@ -42,7 +42,7 @@
     [[SQLiteManager sharedManager]exeSQL:@"BEGIN TRANSACTION;"];
     for (int i = 0; i < 2000; i++) {
         NSDictionary *dict = @{@"name":[NSString stringWithFormat:@"wangwu-%d",i],@"age":@20,@"height":@2.5,@"title":@"student"};
-        Person *p = [Person personWithDict:dict];
+        SQLPerson *p = [SQLPerson personWithDict:dict];
         [p insertPerson];
         
         //执行回滚 模拟失败
@@ -59,7 +59,7 @@
 -(void)demoDeletePerson{
     
     NSDictionary *dict = @{@"id":@10};
-    Person *p = [Person personWithDict:dict];
+    SQLPerson *p = [SQLPerson personWithDict:dict];
     if ([p deletePerson]) {
         NSLog(@"删除%@成功",dict[@"id"]);
     }else{
@@ -69,7 +69,7 @@
 -(void)demoUpdatePerson{
     
     NSDictionary *dict = @{@"id":@3,@"name":@"aisi",@"age":@20,@"height":@2.5,@"title":@"火拳艾斯"};
-    Person *p = [Person personWithDict:dict];
+    SQLPerson *p = [SQLPerson personWithDict:dict];
     if ([p updatePerson]) {
         NSLog(@"更新成功");
     }else{
@@ -80,7 +80,7 @@
 -(void)demoInsertPerson{
     
     NSDictionary *dict = @{@"name":@"wangwu",@"age":@20,@"height":@2.5,@"title":@"student"};
-    Person *person = [Person personWithDict:dict];
+    SQLPerson *person = [SQLPerson personWithDict:dict];
     if ([person insertPerson]) {
         NSLog(@"插入成功 %@",person);
     }else{

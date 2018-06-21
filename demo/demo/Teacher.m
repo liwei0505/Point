@@ -1,13 +1,13 @@
 //
-//  Person.h
+//  Teacher.m
 //  demo
 //
 //  Created by lee on 2018/6/8.
 //  Copyright © 2018年 lee. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Teacher.h"
 
-@interface Person : NSObject
-- (void)eat;
+@implementation Teacher
+
 @end
