@@ -4,7 +4,9 @@
 //
 //  Created by lw on 15/8/20.
 //  Copyright © 2015年 lw. All rights reserved.
-
+/*
+     GCDAsyncSocket：socket框架
+ */
 /*
  操作说明：
  host:127.0.0.1  port:12345
