@@ -10,4 +10,5 @@
 
 @interface Person : NSObject
 - (void)eat;
+- (void)eatWith:(NSString *)food;
 @end

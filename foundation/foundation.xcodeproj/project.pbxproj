@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B63DC4C20E4A7AE006EE651 /* StringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B63DC4B20E4A7AE006EE651 /* StringTest.m */; };
 		9B8F2F5B20B6D0460075A474 /* Tips.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F2F5A20B6D0460075A474 /* Tips.m */; };
 		9B8F2F6220B6D5B50075A474 /* SortHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F2F6020B6D5B50075A474 /* SortHelper.cpp */; };
 		9BA4FC0A20946F5300157100 /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA4FC0920946F5300157100 /* Father.m */; };
@@ -29,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B63DC4A20E4A7AE006EE651 /* StringTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringTest.h; sourceTree = "<group>"; };
+		9B63DC4B20E4A7AE006EE651 /* StringTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringTest.m; sourceTree = "<group>"; };
 		9B8F2F5920B6D0460075A474 /* Tips.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tips.h; sourceTree = "<group>"; };
 		9B8F2F5A20B6D0460075A474 /* Tips.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tips.m; sourceTree = "<group>"; };
 		9B8F2F6020B6D5B50075A474 /* SortHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SortHelper.cpp; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				9B8F2F5820B6D0270075A474 /* ocTips */,
 				9B8F2F5420B6C8AA0075A474 /* c++ */,
 				C9D602BB2050300F00B306EF /* main.mm */,
+				9B63DC4A20E4A7AE006EE651 /* StringTest.h */,
+				9B63DC4B20E4A7AE006EE651 /* StringTest.m */,
 			);
 			path = foundation;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				C9D602BC2050300F00B306EF /* main.mm in Sources */,
 				9B8F2F5B20B6D0460075A474 /* Tips.m in Sources */,
 				9BA4FC0A20946F5300157100 /* Father.m in Sources */,
+				9B63DC4C20E4A7AE006EE651 /* StringTest.m in Sources */,
 				C9D602C4205034F900B306EF /* OrderDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,4 +12,9 @@
 - (void)eat {
     NSLog(@"吃了");
 }
+
+- (void)eatWith:(NSString *)food {
+    NSLog(@"%@",food);
+}
+
 @end

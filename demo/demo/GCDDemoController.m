@@ -250,6 +250,7 @@
     });
 }
 
+#pragma mark - 异步执行 并发队列
 // 异步：会开启线程
 - (void)demo1 {
     //全局队列
@@ -260,6 +261,7 @@
     dispatch_async(q, block);
 }
 
+#pragma mark - 同步执行 并发队列
 //同步:不开启新线程，在当前线程执行
 - (void)demo2 {
     dispatch_queue_t q = dispatch_queue_create(0, 0);

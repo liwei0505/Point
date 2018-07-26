@@ -6,8 +6,8 @@
 //  Copyright © 2018年 lee. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Person.h"
 
-@interface Teacher : NSObject
-
+@interface Teacher : Person
+- (void)eatWith:(NSString *)food;
 @end
