@@ -9,5 +9,8 @@
 #import "Teacher.h"
 
 @implementation Teacher
-
+- (void)eatWith:(NSString *)food {
+    [super eatWith:food];
+    NSLog(@"子类方法：%@",food);
+}
 @end

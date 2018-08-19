@@ -7,6 +7,8 @@
 //
 
 #import "OCClassController.h"
+#import <objc/runtime.h>
+#import <malloc/malloc.h>
 
 @interface OCClassController ()
 
@@ -16,22 +18,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSObject *obj = [[NSObject alloc] init];
+    
+    //获得NSObject类的实例对象的大小
+    // 8
+    //源码：返回成员变量的大小
+    NSLog(@"%zd", class_getInstanceSize([NSObject class]));
+    
+    //获得obj指针指向内存的大小
+    // 16
+    NSLog(@"%zd", malloc_size((__bridge const void *)obj));
+    
+    //总结：分类了16字节，利用了8个
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

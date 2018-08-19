@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0618E020CE1C5C00BFFF29 /* OCClassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0618DF20CE1C5C00BFFF29 /* OCClassController.m */; };
 		9B06703A1E7B75B7004FA72C /* QueueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0670391E7B75B7004FA72C /* QueueModel.m */; };
 		9B0CB8F11E850DA200CB2130 /* EOCSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0CB8F01E850DA200CB2130 /* EOCSingle.m */; };
 		9B286A4A1FEBCF620055AB00 /* HitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B286A491FEBCF620055AB00 /* HitTestView.m */; };
@@ -29,6 +30,8 @@
 		9BB90A4C20731CB9001E265E /* NSOperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB90A4B20731CB9001E265E /* NSOperationController.m */; };
 		9BCA6B5720CA6E08007FBC50 /* ObjcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA6B5620CA6E08007FBC50 /* ObjcViewController.m */; };
 		9BCA6B5A20CA6EAD007FBC50 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA6B5920CA6EAD007FBC50 /* Person.m */; };
+		9BCA6B7F20CAABDF007FBC50 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA6B7E20CAABDF007FBC50 /* Teacher.m */; };
+		9BCA6B8220CAAFF7007FBC50 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA6B8120CAAFF7007FBC50 /* Student.m */; };
 		9BCFC3F720649F2900E5E47F /* NSThreadDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCFC3F620649F2900E5E47F /* NSThreadDemoController.m */; };
 		C9281BD41F3F3E3D005CCB34 /* AVFoundationBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = C9281BD31F3F3E3D005CCB34 /* AVFoundationBasic.m */; };
 		C9281BD81F44770A005CCB34 /* ImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C9281BD71F44770A005CCB34 /* ImageUtils.m */; };
@@ -61,6 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B0618DE20CE1C5C00BFFF29 /* OCClassController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCClassController.h; sourceTree = "<group>"; };
+		9B0618DF20CE1C5C00BFFF29 /* OCClassController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCClassController.m; sourceTree = "<group>"; };
 		9B0670381E7B75B7004FA72C /* QueueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueModel.h; sourceTree = "<group>"; };
 		9B0670391E7B75B7004FA72C /* QueueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueModel.m; sourceTree = "<group>"; };
 		9B0CB8EF1E850DA200CB2130 /* EOCSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCSingle.h; sourceTree = "<group>"; };
@@ -106,6 +111,10 @@
 		9BCA6B5620CA6E08007FBC50 /* ObjcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcViewController.m; sourceTree = "<group>"; };
 		9BCA6B5820CA6EAD007FBC50 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		9BCA6B5920CA6EAD007FBC50 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		9BCA6B7D20CAABDF007FBC50 /* Teacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
+		9BCA6B7E20CAABDF007FBC50 /* Teacher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
+		9BCA6B8020CAAFF7007FBC50 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		9BCA6B8120CAAFF7007FBC50 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		9BCFC3F520649F2900E5E47F /* NSThreadDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadDemoController.h; sourceTree = "<group>"; };
 		9BCFC3F620649F2900E5E47F /* NSThreadDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadDemoController.m; sourceTree = "<group>"; };
 		C9281BD21F3F3E3D005CCB34 /* AVFoundationBasic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVFoundationBasic.h; sourceTree = "<group>"; };
@@ -173,6 +182,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B0618DD20CE1C0900BFFF29 /* oc底层 */ = {
+			isa = PBXGroup;
+			children = (
+				9B0618DE20CE1C5C00BFFF29 /* OCClassController.h */,
+				9B0618DF20CE1C5C00BFFF29 /* OCClassController.m */,
+			);
+			name = "oc底层";
+			sourceTree = "<group>";
+		};
 		9B0CB8EE1E850D7500CB2130 /* singleton */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +348,10 @@
 				9BCA6B5620CA6E08007FBC50 /* ObjcViewController.m */,
 				9BCA6B5820CA6EAD007FBC50 /* Person.h */,
 				9BCA6B5920CA6EAD007FBC50 /* Person.m */,
+				9BCA6B7D20CAABDF007FBC50 /* Teacher.h */,
+				9BCA6B7E20CAABDF007FBC50 /* Teacher.m */,
+				9BCA6B8020CAAFF7007FBC50 /* Student.h */,
+				9BCA6B8120CAAFF7007FBC50 /* Student.m */,
 			);
 			name = objc;
 			sourceTree = "<group>";
@@ -382,6 +404,7 @@
 		C958C1001E61A4B300E8D721 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				9B0618DD20CE1C0900BFFF29 /* oc底层 */,
 				9BCA6B5420CA6DA6007FBC50 /* objc */,
 				9B676296207D962F0000D0B3 /* download */,
 				9BB90A45207225E0001E265E /* singleton */,
@@ -611,6 +634,7 @@
 				C958C1431E61BBC600E8D721 /* EOCEmployeeDeveloper.m in Sources */,
 				9B286A541FEBD5FF0055AB00 /* UIView+ViewController.m in Sources */,
 				9B286A4A1FEBCF620055AB00 /* HitTestView.m in Sources */,
+				9BCA6B7F20CAABDF007FBC50 /* Teacher.m in Sources */,
 				9B0CB8F11E850DA200CB2130 /* EOCSingle.m in Sources */,
 				C9ECDD721E8A4C38008D9765 /* CacheObject.m in Sources */,
 				9B6B6A1C2068C7D300762F83 /* GCDDemoController.m in Sources */,
@@ -619,10 +643,12 @@
 				C958C1401E61BAAA00E8D721 /* EOCEmployeeFinance.m in Sources */,
 				9B4A468A1E6944F2005EB4DD /* EOCNetworkFetcher.m in Sources */,
 				9BAE18221E65477900A3B151 /* EOCAutoDictionary.m in Sources */,
+				9BCA6B8220CAAFF7007FBC50 /* Student.m in Sources */,
 				C9281BD81F44770A005CCB34 /* ImageUtils.m in Sources */,
 				C958C13D1E61BA9000E8D721 /* EOCEmployeeDesigner.m in Sources */,
 				C958C1261E61AEE600E8D721 /* SocketViewController.m in Sources */,
 				9B4A46861E67FCFE005EB4DD /* EOCPerson.m in Sources */,
+				9B0618E020CE1C5C00BFFF29 /* OCClassController.m in Sources */,
 				C958C11B1E61A50E00E8D721 /* BlockViewController.m in Sources */,
 				9B4A46821E67ECC8005EB4DD /* EOCSquare.m in Sources */,
 				C97EA2141FF7D1C7009743C9 /* NSArray+Log.m in Sources */,

@@ -10,15 +10,53 @@
 #include "SortHelper.hpp"
 #import <objc/message.h>
 #import "Person.h"
+
+#import "StringTest.h"
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+<<<<<<< HEAD
         Person *p = [Person alloc];
         p = [p init];
         NSString *a = p.run;
         NSLog(@"%@",a);
+=======
+//        Person *p = [Person alloc];
+//        p = [p init];
+//        NSURL *url = [NSURL URLWithString:@"https://www.jianshu.com/p/41ecb06ae95f"];
+        
+>>>>>>> e4887dc141d0183a1894d0d4c3bd5d27d5a95ac6
 //        getchar(); //防止屏幕退出，接收一个字符才退出
+    
+        dispatch_queue_t q = dispatch_get_global_queue(0, 0);
+        dispatch_sync(q, ^{
+            NSLog(@"%@",[NSThread currentThread]);
+        });
+        dispatch_async(q, ^{
+            NSLog(@"%@",[NSThread currentThread]);
+        });
+        
     }
     return 0;
+}
+
+void sortArray() {
+    NSArray *array = @[@"b",@"f",@"a",@"e",@"g"];
+    //用系统默认compare方法排序：只支持升序
+    NSArray *a = [array sortedArrayUsingSelector:@selector(compare:)];
+    NSLog(@"%@%@",a,array);
+}
+
+void stringTest() {
+    NSMutableString *mstr = [NSMutableString stringWithFormat:@"abc"];
+    StringTest *t = [[StringTest alloc] init];
+    t.test = mstr;
+    
+    [t.test stringByAppendingString:@"def"];
+    
+    NSLog(@"%@",t.test);
+    [mstr insertString:@"mmm" atIndex:1];
+    NSLog(@"%@",t.test);
 }
 
 void cppSortDemo() {
