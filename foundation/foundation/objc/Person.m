@@ -9,5 +9,7 @@
 #import "Person.h"
 
 @implementation Person
-
+- (NSString *)run {
+    return @"跑步";
+}
 @end

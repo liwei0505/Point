@@ -14,7 +14,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Person *p = [Person alloc];
         p = [p init];
-        
+        NSString *a = p.run;
+        NSLog(@"%@",a);
 //        getchar(); //防止屏幕退出，接收一个字符才退出
     }
     return 0;
