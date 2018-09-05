@@ -21,14 +21,39 @@ int main(int argc, const char * argv[]) {
         
 //        getchar(); //防止屏幕退出，接收一个字符才退出
     
-        dispatch_queue_t q = dispatch_get_global_queue(0, 0);
-        dispatch_sync(q, ^{
-            NSLog(@"%@",[NSThread currentThread]);
-        });
-        dispatch_async(q, ^{
-            NSLog(@"%@",[NSThread currentThread]);
-        });
+//        dispatch_queue_t q = dispatch_get_global_queue(0, 0);
+//        dispatch_sync(q, ^{
+//            NSLog(@"%@",[NSThread currentThread]);
+//        });
+//        dispatch_async(q, ^{
+//            NSLog(@"%@",[NSThread currentThread]);
+//        });
         
+//        NSString *str = @"cheet";
+//        str = @"cheetmmmm";
+//        void(^block)() = ^{
+//            NSLog(@"%@",str);
+//        };
+//        str = @"moble";
+//        block();
+        
+//
+//        NSMutableArray *arr = [[NSMutableArray alloc] initWithCapacity:10];
+//        for(int i=0; i<10; i++) {
+//            [arr addObject:[NSNumber numberWithInt:i]];
+//        }
+//
+//        for(NSNumber *num in arr){
+//            [arr removeObject:num];
+//        }
+ 
+        for (int i=0; i<50; i++) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                NSLog(@"%@",[NSThread currentThread]);
+                sleep(10);
+            });
+        }
+        NSLog(@"finish");
     }
     return 0;
 }

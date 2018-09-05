@@ -26,6 +26,7 @@
 		9B676299207D96480000D0B3 /* DownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B676298207D96480000D0B3 /* DownloadController.m */; };
 		9B6B6A1C2068C7D300762F83 /* GCDDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B6A1B2068C7D300762F83 /* GCDDemoController.m */; };
 		9BAE18221E65477900A3B151 /* EOCAutoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE18211E65477900A3B151 /* EOCAutoDictionary.m */; };
+		9BB117892112EDE7008C739D /* CodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB117882112EDE7008C739D /* CodeObject.m */; };
 		9BB90A4820722612001E265E /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB90A4720722612001E265E /* Singleton.m */; };
 		9BB90A4C20731CB9001E265E /* NSOperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB90A4B20731CB9001E265E /* NSOperationController.m */; };
 		9BCA6B5720CA6E08007FBC50 /* ObjcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA6B5620CA6E08007FBC50 /* ObjcViewController.m */; };
@@ -103,6 +104,8 @@
 		9B6B6A1B2068C7D300762F83 /* GCDDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDDemoController.m; sourceTree = "<group>"; };
 		9BAE18201E65477900A3B151 /* EOCAutoDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCAutoDictionary.h; sourceTree = "<group>"; };
 		9BAE18211E65477900A3B151 /* EOCAutoDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCAutoDictionary.m; sourceTree = "<group>"; };
+		9BB117872112EDE7008C739D /* CodeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeObject.h; sourceTree = "<group>"; };
+		9BB117882112EDE7008C739D /* CodeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeObject.m; sourceTree = "<group>"; };
 		9BB90A4620722612001E265E /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		9BB90A4720722612001E265E /* Singleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		9BB90A4A20731CB9001E265E /* NSOperationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationController.h; sourceTree = "<group>"; };
@@ -323,6 +326,15 @@
 			name = autoSelector;
 			sourceTree = "<group>";
 		};
+		9BB117862112EDA8008C739D /* 归解档 */ = {
+			isa = PBXGroup;
+			children = (
+				9BB117872112EDE7008C739D /* CodeObject.h */,
+				9BB117882112EDE7008C739D /* CodeObject.m */,
+			);
+			name = "归解档";
+			sourceTree = "<group>";
+		};
 		9BB90A45207225E0001E265E /* singleton */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +416,7 @@
 		C958C1001E61A4B300E8D721 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				9BB117862112EDA8008C739D /* 归解档 */,
 				9B0618DD20CE1C0900BFFF29 /* oc底层 */,
 				9BCA6B5420CA6DA6007FBC50 /* objc */,
 				9B676296207D962F0000D0B3 /* download */,
@@ -634,6 +647,7 @@
 				C958C1431E61BBC600E8D721 /* EOCEmployeeDeveloper.m in Sources */,
 				9B286A541FEBD5FF0055AB00 /* UIView+ViewController.m in Sources */,
 				9B286A4A1FEBCF620055AB00 /* HitTestView.m in Sources */,
+				9BB117892112EDE7008C739D /* CodeObject.m in Sources */,
 				9BCA6B7F20CAABDF007FBC50 /* Teacher.m in Sources */,
 				9B0CB8F11E850DA200CB2130 /* EOCSingle.m in Sources */,
 				C9ECDD721E8A4C38008D9765 /* CacheObject.m in Sources */,
