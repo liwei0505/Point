@@ -195,5 +195,30 @@
     //若想在后台执行，则应使用dispatch group
 }
 
+#pragma mark - dispatch_get_global_queue参数
+
+- (void)globalParams {
+    /*参数
+     1。涉及系统适配 ios 8 服务质量
+     QOS_CLASS_USER_INTERACTIVE 用户交互（希望线程快速执行 不要放耗时操作）
+     QOS_CLASS_USER_INITIATED 用户需要的 （不要放耗时操作）
+     QOS_CLASS_DEFAULT 默认
+     QOS_CLASS_UTILITY 使用工具 可以耗时操作
+     QOS_CLASS_BACKGROUND 后台
+     QOS_CLASS_UNSPECIFIED 没有指定优先级
+     
+     ios 7
+     DISPATCH_QUEUE_PRIORITY_HIGH 2 高优先级
+     DISPATCH_QUEUE_PRIORITY_DEFAULT 0 默认优先级
+     DISPATCH_QUEUE_PRIORITY_LOW (-2) 低优先级
+     DISPATCH_QUEUE_PRIORITY_BACKGROUND INT16_MIN 后台优先级
+     
+     2.保留参数
+     
+     不要选择后台优先级 线程会非常慢
+     */
+    
+    dispatch_queue_t q = dispatch_queue_create(0, 0);//0 默认
+}
 
 @end

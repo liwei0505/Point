@@ -111,10 +111,11 @@
     dispatch_queue_t q = dispatch_queue_create("dependent", DISPATCH_QUEUE_CONCURRENT);
     //异步队列同步执行 可以让任务 依赖 某一个任务
     //登录后才能下载
-//    dispatch_sync(q, ^{ //同步任务不执行完不会继续执行，会马上执行login
+    //同步任务不执行完，队列不会调度后边的任务
+//    dispatch_sync(q, ^{ //此时由于是同步执行不会开启线程且同步任务不执行完不会继续执行，会马上执行login
 //        NSLog(@"login %@",[NSThread currentThread]);
 //    });
-//    // login后会开线程异步执行下边两个任务
+//    // login后，此时看到是异步任务才会开线程异步执行下边两个任务
 //    dispatch_async(q, ^{
 //        NSLog(@"download a %@",[NSThread currentThread]);
 //    });
